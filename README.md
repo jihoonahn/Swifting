@@ -5,7 +5,7 @@
 
 
 # information
-- 컨퍼런스 - [Let's Swift](http://letswift.kr/2023/)
+- 컨퍼런스 - [Let'Swift](http://letswift.kr/2023/)
 - 주제 - [Swift로 CrossPlatform 하기]()
 
 # Environment
