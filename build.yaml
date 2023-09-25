@@ -12,8 +12,8 @@ search-paths: []
 linked-libs: []
 
 ios:
-  name: LetSwift
-  id: com.scade.letswift
+  name: Swifting
+  id: com.jihoonahn.swifting
   device-family: iphone # iphone, ipad or universal
   supported-interface-orientations: ['portrait'] # portrait, upside_down, landscape_left or landscape_right
   supported-interface-orientationsiPad: ['portrait']
@@ -22,20 +22,20 @@ ios:
   export-method: ad-hoc # app-store, enterprise or development
   simulator:
     os: 12.1
-    output: LetSwift/.build/ios-simulator
+    output: Swifting/.build/ios-simulator
     extra-args:
     search-paths: []
     linked-libs: []
   device:
     os: 12.1
-    output: LetSwift/.build/ios-device
-    product-path: LetSwift/Product/ios-device
+    output: Swifting/.build/ios-device
+    product-path: Swifting/Product/ios-device
     extra-args:
     search-paths: []
     linked-libs: []
   mac:
     os: 10.11
-    output:  LetSwift/.build/scade-simulator
+    output:  Swifting/.build/scade-simulator
     extra-args:
     search-paths: []
     linked-libs: []
@@ -58,8 +58,8 @@ ios:
     NSPhotoLibraryUsageDescription: Choose a photo from your library
 
 android:
-  name: LetSwift
-  id: com.scade.letswift
+  name: Swifting
+  id: com.jihoonahn.swifting
   version-name: 1.0.0
   version-code: 1
   build-type: Debug
@@ -68,26 +68,26 @@ android:
   manifest-file:
   permissions: []
   armeabi-v7a:
-    output: LetSwift/.build/android-armeabi-v7a
-    product-path: LetSwift/Product/android-armeabi-v7a
+    output: Swifting/.build/android-armeabi-v7a
+    product-path: Swifting/Product/android-armeabi-v7a
     extra-args:
     search-paths: []
     linked-libs: []
   arm64-v8a:
-    output: LetSwift/.build/android-arm64-v8a
-    product-path: LetSwift/Product/android-arm64-v8a
+    output: Swifting/.build/android-arm64-v8a
+    product-path: Swifting/Product/android-arm64-v8a
     extra-args:
     search-paths: []
     linked-libs: []
   x86:
-    output: LetSwift/.build/android-x86
-    product-path: LetSwift/Product/android-x86
+    output: Swifting/.build/android-x86
+    product-path: Swifting/Product/android-x86
     extra-args:
     search-paths: []
     linked-libs: []
   x86_64:
-    output: LetSwift/.build/android-x86_64
-    product-path: LetSwift/Product/android-x86_64
+    output: Swifting/.build/android-x86_64
+    product-path: Swifting/Product/android-x86_64
     extra-args:
     search-paths: []
     linked-libs: []
@@ -96,7 +96,7 @@ android:
       scheme:
       categories: []
   icons:
-    mdpi:
-    hdpi:
-    xhdpi:
-    xxhdpi:
+    mdpi: 
+    hdpi: 
+    xhdpi: 
+    xxhdpi: 
