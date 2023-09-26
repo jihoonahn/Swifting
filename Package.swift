@@ -1,35 +1,30 @@
-// swift-tools-version:5.3
-
+// swift-tools-version:5.8
 import PackageDescription
 import Foundation
 
 let SCADE_SDK = ProcessInfo.processInfo.environment["SCADE_SDK"] ?? ""
 
 let package = Package(
-    name: "LetSwift",
+    name: "Swifting",
     platforms: [
         .macOS(.v10_14)
     ],
     products: [
-        .library(
-            name: "LetSwift",
-            type: .static,
-            targets: [
-                "LetSwift"
-            ]
-        )
+		.library(name: "Swifting", type: .static, targets: ["Swifting"])
     ],
-    dependencies: [
-      
-    ],
+    dependencies: [],
     targets: [
         .target(
-            name: "LetSwift",
+            name: "Swifting",
             dependencies: [],
-            exclude: ["main.page"],
+            exclude: [
+                "splash.page",
+                "home.page",
+                "detail.page"
+            ],
             swiftSettings: [
                 .unsafeFlags(["-F", SCADE_SDK], .when(platforms: [.macOS, .iOS])),
-                .unsafeFlags(["-I", "\(SCADE_SDK)/include"], .when(platforms: [.android])),
+                .unsafeFlags(["-I", "\(SCADE_SDK)/include"], .when(platforms: [.android]))
             ]
         )
     ]
