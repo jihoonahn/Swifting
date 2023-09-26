@@ -19,22 +19,22 @@ ios:
   supported-interface-orientationsiPad: ['portrait']
   entitlements-file:
   app-delegate-file:
-  export-method: ad-hoc # app-store, enterprise or development
+  export-method: app-store
   simulator:
-    os: 12.1
+    os: 13.0
     output: Swifting/.build/ios-simulator
     extra-args:
     search-paths: []
     linked-libs: []
   device:
-    os: 12.1
+    os: 13.0
     output: Swifting/.build/ios-device
     product-path: Swifting/Product/ios-device
     extra-args:
     search-paths: []
     linked-libs: []
   mac:
-    os: 10.11
+    os: 10.15
     output:  Swifting/.build/scade-simulator
     extra-args:
     search-paths: []
@@ -44,12 +44,12 @@ ios:
     certificate:
   icons:
     iphone: # or ipad, sizes: 20X20, 29X29, 40X40, 60X60, 76X76, 83.5X83.5
-      60X60_2X:
-      76X76_2X:
-      76X76_3X:
-      83.5X83.5_2X:
+      60X60_2X: Assets/logo/ios/60.png
+      76X76_2X: Assets/logo/ios/76.png
+      76X76_3X: Assets/logo/ios/76.png
+      83.5X83.5_2X: Assets/logo/ios/83_5.png
     marketing:
-      1024X1024_1X:
+      1024X1024_1X: Assets/logo/ios/1024.png
   plist:
     CFBundleShortVersionString: string# 1.0
     CFBundleVersion: string# 1
@@ -96,7 +96,7 @@ android:
       scheme:
       categories: []
   icons:
-    mdpi: 
-    hdpi: 
-    xhdpi: 
-    xxhdpi: 
+    mdpi: Assets/logo/android/mipmap-mdpi/ic_launcher.png
+    hdpi: Assets/logo/android/mipmap-hdpi/ic_launcher.png
+    xhdpi: Assets/logo/android/mipmap-xhdpi/ic_launcher.png
+    xxhdpi: Assets/logo/android/mipmap-xxhdpi/ic_launcher.png
