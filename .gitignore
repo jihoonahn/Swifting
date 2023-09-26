@@ -1,6 +1,7 @@
 .build/
 .target/
-products/
+.swiftpm/
+Product/
 *.ipa
 *.scadeapp
 .DS_Store
