@@ -1,5 +1,0 @@
-import ScadeKit
-
-extension SplashPageAdapter {
-
-}
