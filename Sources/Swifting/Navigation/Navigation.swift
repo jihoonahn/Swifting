@@ -1,7 +1,7 @@
 import ScadeKit
 
-final class Navigation {
-	enum Page: String, CaseIterable {
+public final class Navigation {
+	public enum Page: String, CaseIterable {
 		case splash
 		case home
 		case search
@@ -30,7 +30,7 @@ final class Navigation {
  	}
  
  	/// Adapter Method
- 	static func adapter(by page: Page) -> SCDLatticePageAdapter? {
+ 	public static func adapter(by page: Page) -> SCDLatticePageAdapter? {
  		guard let adapter = self.adapters[page] else {
  			let adapter = page.createAdapter()
  			adapter.load(page.fileName)
@@ -40,14 +40,14 @@ final class Navigation {
  		return adapter
  	}
  
-	static func show(_ page: Page, in view: SCDLatticeView) {
+	public static func show(_ page: Page, in view: SCDLatticeView) {
 		self.transitionsStack.append(page)
 	    adapter(by: page)?.show(view: view)
 	}
 }
 
 /// Move Action
-extension Navigation {
+public extension Navigation {
 	static func go(_ page: Page, clearHistrory: Bool = false) {
 		navigation(by: page, clearHistroy: clearHistrory)?.go(page: page.fileName)
 	}

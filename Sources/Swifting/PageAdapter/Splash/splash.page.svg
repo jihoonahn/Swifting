@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:scade="http://www.scade.io/v0.1" widget-name="splash" eObject-URI="splash.page#/0" width="430" height="932">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:scade="http://www.scade.io/v0.1" eObject-URI="splash.page#/0" widget-name="splash" width="430" height="932">
   <image xlink:href="Assets/splash/splash.svg" template-id="background" width="100%" height="100%" />
   <svg template-id="content-box">
     <g template-id="content">
