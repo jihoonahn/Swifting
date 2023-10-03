@@ -34,7 +34,7 @@ ios:
     search-paths: []
     linked-libs: []
   mac:
-    os: 10.14
+    os: 10.15
     output:  Swifting/.build/scade-simulator
     extra-args:
     search-paths: []
