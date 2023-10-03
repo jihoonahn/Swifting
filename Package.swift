@@ -11,7 +11,7 @@ let scadeSetting: [SwiftSetting] = [
 let package = Package(
     name: "Swifting",
     platforms: [
-        .macOS(.v10_14)
+        .macOS(.v10_15), .iOS(.v13)
     ],
     products: [
 		.library(name: "Swifting", type: .static, targets: ["Swifting"]),
@@ -23,7 +23,7 @@ let package = Package(
         .target(
             name: "Swifting",
             dependencies: [
-            	"Services",
+                "Services",
             	"Core"
             ],
             exclude: [
@@ -38,8 +38,14 @@ let package = Package(
         	name: "Services",
         	dependencies: [
         		"Core"
-        	]
+        	],
+            resources: [
+                .process("Resources/Services.plist")
+            ],
+            swiftSettings: scadeSetting
         ),
-        .target(name: "Core")
+        .target(
+            name: "Core"
+        )
     ]
 )
