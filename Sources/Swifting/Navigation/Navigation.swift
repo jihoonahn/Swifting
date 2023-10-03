@@ -79,7 +79,6 @@ public extension Navigation {
 	}
 	
 	static func go(_ page: Page, clearHistrory: Bool = false, transition: SCDLatticeTransition = .fromRight) {
-		print("page: \(page.fileName), stack: \(transitionsStack)")
 		navigation(by: page, clearHistroy: clearHistrory)?.go(page: page.fileName, transition: transition)
 	}
 
@@ -94,7 +93,6 @@ public extension Navigation {
         guard self.transitionsStack.count > 1 else { return }
         let last = self.transitionsStack.popLast()
         let page = self.current!.fileName
-        print("page: \(page), stack: \(transitionsStack)")
         adapter(by: last!)?.navigation?.go(page: page, transition: .fromBottom)
     }
 }
