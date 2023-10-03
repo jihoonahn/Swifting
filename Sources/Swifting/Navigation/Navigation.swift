@@ -95,7 +95,6 @@ public extension Navigation {
         let last = self.transitionsStack.popLast()
         let page = self.current!.fileName
         print("page: \(page), stack: \(transitionsStack)")
-      	self.transitionsStack.removeAll()
         adapter(by: last!)?.navigation?.go(page: page, transition: .fromBottom)
     }
 }
