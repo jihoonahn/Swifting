@@ -1,10 +1,24 @@
 import ScadeKit
+import Services
   
-final class HomePageAdapter: BasePageAdapter {
+final class HomePageAdapter: BasePageAdapter<HomePageViewModel> {
 	
-	override func action() {
-		searchButton.onClick { _ in
-			Navigation.go(.search, transition: .fromRight)
-		}
+	override func configUI() {
+        mainList.elementProvider = SCDWidgetsElementProvider { (item: SwiftEvolutionEntity, template) in
+            (template.getWidgetByName("statusLabel") as? SCDWidgetsLabel)?.text = item.status.transformedState
+            (template.getWidgetByName("titleLabel") as? SCDWidgetsLabel)?.text = item.title
+        }
+	}
+		
+	override func bindAction() {
+        viewModel.networkingAction {
+            self.mainList.items = self.viewModel.swiftEvolution
+        }
+		mainList.onItemSelected.append(
+			SCDWidgetsItemSelectedEventHandler { event in
+				guard let item = event?.item as? SwiftEvolutionEntity else { return }
+				self.viewModel.listItemSelect(item.link)
+			}
+		)
 	}
 }
