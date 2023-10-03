@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:scade="http://www.scade.io/v0.1" eObject-URI="home.page#/0" widget-name="home" width="430" height="932">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:scade="http://www.scade.io/v0.1" widget-name="home" eObject-URI="home.page#/0" width="430" height="932">
   <rect template-id="background" width="100%" height="100%" fill="#f8f8f8" />
   <svg template-id="content-box">
     <g template-id="content">
@@ -30,30 +30,22 @@
           <g scrollableBox="430 817" template-id="listContent" scrollable="vertical">
             <svg eObject-URI="home.page#/0/@children.2/@template/@element" widget-name="listElement" x="25" width="380" height="106">
               <g template-id="elementContent">
-                <svg eObject-URI="home.page#/0/@children.2/@template/@element/@children.0" widget-name="HorizontalStack" width="380" height="106">
+                <svg eObject-URI="home.page#/0/@children.2/@template/@element/@children.0" widget-name="verticialGrid" width="380" height="106">
                   <svg template-id="content-box">
                     <g template-id="content">
                       <g template-id="children-content">
-                        <svg eObject-URI="home.page#/0/@children.2/@template/@element/@children.0/@children.0" widget-name="verticalStack" width="380" height="106">
-                          <svg template-id="content-box">
+                        <svg eObject-URI="home.page#/0/@children.2/@template/@element/@children.0/@children.0" widget-name="statusLabel" y="15" width="52" height="38">
+                          <rect stroke-width="3" template-id="background" width="100%" height="100%" fill="#ffffff" stroke="#2f3030" />
+                          <svg template-id="content-box" x="10" y="10" width="32" height="18">
                             <g template-id="content">
-                              <g template-id="children-content">
-                                <svg eObject-URI="home.page#/0/@children.2/@template/@element/@children.0/@children.0/@children.0" widget-name="statusLabel" width="52" height="38" y="15">
-                                  <rect template-id="background" width="100%" height="100%" fill="#ffffff" stroke-width="2" stroke="#0" rx="5%" />
-                                  <svg template-id="content-box" y="10" width="32" height="18" x="10">
-                                    <g template-id="content">
-                                      <text alignment-baseline="middle" font-size="15" font-family="ArialMT" font-style="normal" text-decoration="none" template-id="node-text" x="0" y="9" fill="#0">label</text>
-                                    </g>
-                                  </svg>
-                                </svg>
-                                <svg eObject-URI="home.page#/0/@children.2/@template/@element/@children.0/@children.0/@children.1" widget-name="titleLabel" y="53" width="380" height="38">
-                                  <svg template-id="content-box" width="380" height="18" y="10">
-                                    <g template-id="content">
-                                      <text alignment-baseline="middle" font-size="15" font-family="Arial-BoldMT" font-style="normal" text-decoration="none" template-id="node-text" x="0" y="9" fill="#0">label</text>
-                                    </g>
-                                  </svg>
-                                </svg>
-                              </g>
+                              <text alignment-baseline="middle" font-size="15" font-family="ArialMT" font-style="normal" text-decoration="none" template-id="node-text" x="0" y="9" fill="#464646">label</text>
+                            </g>
+                          </svg>
+                        </svg>
+                        <svg eObject-URI="home.page#/0/@children.2/@template/@element/@children.0/@children.1" widget-name="titleLabel" y="63" width="380" height="28">
+                          <svg template-id="content-box" y="5" width="380" height="18">
+                            <g template-id="content">
+                              <text alignment-baseline="middle" font-size="15" font-family="Arial-BoldMT" font-style="normal" text-decoration="none" template-id="node-text" x="0" y="9" fill="#464646">label</text>
                             </g>
                           </svg>
                         </svg>

@@ -35,41 +35,31 @@
     <children xsi:type="widgets:List" paddingLeft="25" name="mainList" paddingRight="25">
       <template name="template">
         <element name="listElement">
-          <children xsi:type="widgets:RowView" name="HorizontalStack">
-            <children xsi:type="widgets:ListView" paddingTop="15" paddingBottom="15" name="verticalStack">
-              <children xsi:type="widgets:Label" text="label" cornerRadius="10" name="statusLabel" paddingTop="10" paddingRight="10" paddingLeft="10" paddingBottom="10">
-                <font fontFamily="ArialMT" size="15">
-                  <color/>
-                </font>
-                <location y="15"/>
-                <size width="52" height="38"/>
-                <contentSize width="32" height="18"/>
-                <layoutData xsi:type="layout:GridData" verticalAlignment="MIDDLE" heightConstraint="MATCH_PARENT" grabVerticalSpace="true">
-                  <maxSize width="-1" height="-1"/>
-                </layoutData>
-                <backgroundColor Red="255" Green="255" Blue="255" Alpha="0"/>
-              </children>
-              <children xsi:type="widgets:Label" text="label" name="titleLabel" paddingTop="10" paddingBottom="10">
-                <font fontFamily="Arial-BoldMT" size="15">
-                  <color/>
-                </font>
-                <layoutData xsi:type="layout:GridData" row="1" horizontalAlignment="CENTER" verticalAlignment="MIDDLE" grabHorizontalSpace="true" widthConstraint="MATCH_PARENT">
-                  <maxSize width="-1" height="-1"/>
-                </layoutData>
-                <location y="53"/>
-                <size width="380" height="38"/>
-                <contentSize width="35" height="18"/>
-              </children>
-              <layout xsi:type="layout:GridLayout" rows="2"/>
-              <maxArea width="-1" height="-1"/>
-              <location/>
-              <minArea/>
-              <size width="380" height="106"/>
-              <layoutData xsi:type="layout:GridData" verticalAlignment="MIDDLE" heightConstraint="MATCH_PARENT" grabHorizontalSpace="true" widthConstraint="MATCH_PARENT" grabVerticalSpace="true">
+          <children xsi:type="widgets:ListView" paddingTop="15" paddingBottom="15" name="verticialGrid">
+            <children xsi:type="widgets:Label" text="label" paddingLeft="10" paddingRight="10" paddingTop="10" paddingBottom="10" name="statusLabel">
+              <font fontFamily="ArialMT" size="15">
+                <color Red="70" Green="70" Blue="70"/>
+              </font>
+              <location y="15"/>
+              <size width="52" height="38"/>
+              <contentSize width="32" height="18"/>
+              <layoutData xsi:type="layout:GridData" verticalAlignment="MIDDLE" heightConstraint="MATCH_PARENT" grabVerticalSpace="true">
                 <maxSize width="-1" height="-1"/>
               </layoutData>
+              <backgroundColor Red="255" Green="255" Blue="255"/>
             </children>
-            <layout xsi:type="layout:GridLayout"/>
+            <children xsi:type="widgets:Label" text="label" name="titleLabel" paddingTop="5" paddingBottom="5">
+              <font fontFamily="Arial-BoldMT" size="15">
+                <color Red="70" Green="70" Blue="70"/>
+              </font>
+              <layoutData xsi:type="layout:GridData" row="1" horizontalAlignment="CENTER" verticalAlignment="MIDDLE" grabHorizontalSpace="true" widthConstraint="MATCH_PARENT">
+                <maxSize width="-1" height="-1"/>
+              </layoutData>
+              <location y="63"/>
+              <size width="380" height="28"/>
+              <contentSize width="35" height="18"/>
+            </children>
+            <layout xsi:type="layout:GridLayout" rows="2" verticalSpacing="10"/>
             <maxArea width="-1" height="-1"/>
             <location/>
             <minArea/>
