@@ -1,5 +1,4 @@
 import Foundation
-import Combine
 
 public protocol Network {
     func request<T: Decodable>(_ api: any API, dto: T.Type) async throws -> T
