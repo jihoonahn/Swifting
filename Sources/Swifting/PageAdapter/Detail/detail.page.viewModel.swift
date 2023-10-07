@@ -15,10 +15,10 @@ final class DetailPageViewModel: BaseViewModel {
     }
     
     func webViewOnLoaded() {
-    	oslog(type: .info, "Website is Loaded")
+        log(type: .info, "Website is Loaded")
     }
     
     func webViewOnLoadedFailed() {
-        oslog(type: .error, "Website is Loaded Failed")
+        log(type: .error, "Website is Loaded Failed")
     }
 }
