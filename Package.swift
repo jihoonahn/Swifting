@@ -23,8 +23,7 @@ let package = Package(
         .target(
             name: "Swifting",
             dependencies: [
-                "Services",
-            	"Core"
+                "Services"
             ],
             exclude: [
                 "splash.page",
@@ -45,7 +44,8 @@ let package = Package(
             swiftSettings: scadeSetting
         ),
         .target(
-            name: "Core"
+            name: "Core",
+            swiftSettings: scadeSetting
         )
     ]
 )
