@@ -21,15 +21,15 @@
         <maxSize width="-1" height="-1"/>
       </layoutData>
     </children>
-    <children xsi:type="widgets:Label" text="swift evolution" paddingLeft="25" name="listTitle">
+    <children xsi:type="widgets:Label" text="swift evolution" paddingLeft="25" name="listTitleLabel">
       <font fontFamily="ArialMT" size="17">
         <color Red="152" Green="152" Blue="152"/>
       </font>
-      <layoutData xsi:type="layout:GridData" row="1" verticalAlignment="MIDDLE">
+      <layoutData xsi:type="layout:GridData" row="1" verticalAlignment="MIDDLE" grabHorizontalSpace="true" widthConstraint="MATCH_PARENT">
         <maxSize width="-1" height="-1"/>
       </layoutData>
       <location y="71"/>
-      <size width="132" height="19"/>
+      <size width="430" height="19"/>
       <contentSize width="107" height="19"/>
     </children>
     <children xsi:type="widgets:List" paddingLeft="25" name="mainList" paddingRight="25">

@@ -10,7 +10,7 @@ final class HomePageAdapter: BasePageAdapter<HomePageViewModel> {
         }
 	}
 		
-	override func bindAction() {
+	override func bind() {
         viewModel.networkingAction {
             self.mainList.items = self.viewModel.swiftEvolution
         }

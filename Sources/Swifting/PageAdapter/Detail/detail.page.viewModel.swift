@@ -3,14 +3,22 @@ import Services
 import Core
 
 final class DetailPageViewModel: BaseViewModel {
-    var url: String
+    var url: String = ""
     
-    init(url: String) {
+    func closeAction() {
+        Navigation.dismiss()
+    }
+    
+    func updateURL(url: String) {
         let websiteURL = URL.bundleSwiftEvolutionURL.appendingPathComponent(url)
         self.url = websiteURL.absoluteString
     }
     
-    func closeAction() {
-        Navigation.dismiss()
+    func webViewOnLoaded() {
+    	oslog(type: .info, "Website is Loaded")
+    }
+    
+    func webViewOnLoadedFailed() {
+        oslog(type: .error, "Website is Loaded Failed")
     }
 }

@@ -11,17 +11,16 @@ class BasePageAdapter<ViewModel: BaseViewModel>: SCDLatticePageAdapter {
 	override func load(_ path: String) {
 		super.load(path)
         configUI()
-		bindAction()
-		bindState()
+		bind()
 	}
 	
 	override func show(view: (SCDLatticeView)?, data: Any) {
 		super.show(view: view, data: data)
+        onAppear(data: data)
         onAppear()
 	}
-
 	func configUI() {}
     func onAppear() {}
-	func bindAction() {}
-	func bindState() {}
+    func onAppear(data: Any) {}
+	func bind() {}
 }

@@ -10,19 +10,12 @@ public final class Navigation {
         #endif
     }
     
-	public enum Page {
+	public enum Page: String, CaseIterable {
 		case splash
 		case home
-		case detail(String)
-		var fileName: String {
-			switch self {
-                case .splash:
-                return "splash.page"
-                case .home:
-                return "home.page"
-                case .detail:
-                return "detail.page"
-			}
+		case detail
+	    var fileName: String {
+			return "\(self.rawValue).page"
 		}
 		func createAdapter() -> SCDLatticePageAdapter {
 			switch self {
@@ -30,8 +23,8 @@ public final class Navigation {
                 return Swifting.appDependency.splashPageDependency.page
 				case .home:
                 return Swifting.appDependency.homePageDependency.page
-				case let .detail(url):
-                return detailPage(url: url)
+				case .detail:
+                return Swifting.appDependency.detailPageDependency.page
 			}
 		}
 	}
@@ -59,15 +52,6 @@ public final class Navigation {
 	}
 }
 
-private extension Navigation.Page {
-    func detailPage(url: String) -> DetailPageAdapter {
-        let viewModel = DetailPageViewModel(url: url)
-        let page = DetailPageAdapter(viewModel: viewModel)
-        return page
-    }
-}
-
-
 // MARK: - Navigation Extension
 /// Move Action
 public extension Navigation {
@@ -80,6 +64,10 @@ public extension Navigation {
 	
 	static func go(_ page: Page, clearHistrory: Bool = false, transition: SCDLatticeTransition = .fromRight) {
 		navigation(by: page, clearHistroy: clearHistrory)?.go(page: page.fileName, transition: transition)
+	}
+
+	static func go(_ page: Page, with data: Any, clearHistrory: Bool = false, transition: SCDLatticeTransition = .fromRight) {
+		navigation(by: page, clearHistroy: clearHistrory)?.goWith(page: page.fileName, data: data, transition: transition)
 	}
 
 	static func back() {

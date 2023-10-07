@@ -9,8 +9,8 @@ extension HomePageAdapter {
     return self.page?.getWidgetByName("logoImage") as! SCDWidgetsImage
   }
 
-  var listTitle: SCDWidgetsLabel {
-    return self.page?.getWidgetByName("listTitle") as! SCDWidgetsLabel
+  var listTitleLabel: SCDWidgetsLabel {
+    return self.page?.getWidgetByName("listTitleLabel") as! SCDWidgetsLabel
   }
 
   var mainList: SCDWidgetsList {

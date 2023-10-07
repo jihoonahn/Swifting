@@ -5,8 +5,8 @@ struct DetailPageDependency {
 }
 
 extension DetailPageDependency {
-    static func resolve(url: String) -> DetailPageDependency {
-        let viewModel = DetailPageViewModel(url: url)
+    static func resolve() -> DetailPageDependency {
+        let viewModel = DetailPageViewModel()
         let page = DetailPageAdapter(viewModel: viewModel)
         return DetailPageDependency(page: page)
     }

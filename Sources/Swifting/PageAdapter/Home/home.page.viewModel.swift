@@ -26,7 +26,6 @@ final class HomePageViewModel: BaseViewModel {
 
 	/// Item Select Action
     func listItemSelect(_ url: String) {
-    	print(url)
-    	Navigation.go(.detail(url), transition: .fromTop)
+        Navigation.go(.detail, with: url, clearHistrory: false, transition: .fromTop)
     }
 }

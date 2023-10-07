@@ -1,7 +1,7 @@
 import ScadeKit
   
 final class SplashPageAdapter: BasePageAdapter<SplashPageViewModel> {
-	override func bindAction() {
+	override func bind() {
         viewModel.splashAction()
 	}
 }

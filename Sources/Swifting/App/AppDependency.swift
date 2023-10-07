@@ -20,4 +20,7 @@ extension AppDependency {
     var homePageDependency: HomePageDependency {
         return .resolve(swiftEvolutionDependency.swiftEvolutionUseCase)
     }
+    var detailPageDependency: DetailPageDependency {
+        return .resolve()
+    }
 }
