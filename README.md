@@ -1,7 +1,7 @@
 # Swifting
 `Swifting` for Let'Swift 2023 
 
-<img width = 20% src="https://github.com/Jihoonahn/LetSwift-scade/assets/68891494/0f54d732-ffb7-40f2-9372-b5a07f0ced49"></img>
+<img width = 20% src="https://github.com/Jihoonahn/Swifting/assets/68891494/22d8e7a2-ff0b-4525-b5b6-92fece3f7c18"></img>
 
 
 # information
